@@ -1,0 +1,27 @@
+.footer {
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+
+    &__note {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 1000px;
+        font-family: $font-family;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: $highlight-color;
+        }
+
+    }
+
+}

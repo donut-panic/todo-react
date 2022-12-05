@@ -1,0 +1,15 @@
+// FONTS
+$font-family: 'Lato', sans-serif;
+
+// COLORS
+$highlight-color: #90E43D;
+$grey-color: rgb(156, 156, 156);
+$error-color: rgb(248, 28, 28);
+
+// BREAKPOINTS
+$breakpoints: (xsmall: screen and (min-width: 320px),
+    small: (min-width: 460px),
+    medium: (min-width: 768px),
+    large: (min-width: 1024px),
+    xlarge: (min-width: 1200px),
+);

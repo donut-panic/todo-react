@@ -1,0 +1,52 @@
+.tag {
+  @include flex(row, center, center, inline-flex);
+  font-family: $font-family;
+  font-size: 1rem;
+  color: #fff;
+  background-color: $highlight-color;
+  padding: 4px 4px 4px 10px;
+  border-radius: 30px;
+  margin: 2rem 0.5rem 0 0;
+
+  @include media-query(medium) {
+    font-size: 1.4rem;
+    padding: 8px 8px 8px 12px;
+    margin: 2rem 0.8rem 0 0;
+  }
+
+  &__icon {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-right: 1rem;
+
+    @include media-query(medium) {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  &__cross {
+    @include flex(row, center, center, inline-flex);
+    font-size: 0.8rem;
+    line-height: 22px;
+    margin-left: 5px;
+    border: 0;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s ease;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #fff;
+
+    @include media-query(medium) {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.user-bar {
+    @include flex(row, center, stretch);
+    height: 100px;
+    background-color: #fff;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    // Username & sign out text
+    &__action-user, &__action-signout {
+        margin-left: 50px;
+        font-family: $font-family;
+        font-size: 1.4rem;
+        color: $grey-color;
+    }
+
+    &__action-user {
+        display: none;
+
+        @include media-query(medium) {
+            display: inline-block;
+        }
+
+    }
+
+    &__username {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: $font-family;
+        font-size: 1.4rem;
+        color: $grey-color;
+
+        &:hover {
+            color: $highlight-color;
+        }
+
+    }
+
+    &__signout {
+        @extend .user-bar__username;
+    }
+
+    // Icons
+    &__icon-user:before {
+        content:'\0041';
+        font-size: 1.8rem;
+        position: relative;
+        top: 5px;
+        left: -8px;
+        color: $highlight-color;
+    }
+
+    &__icon-signout:before {
+        content:'\0042';
+        font-size: 1.8rem;
+        position: relative;
+        top: 5px;
+        left: -8px;
+        color: $highlight-color;
+    }
+
+    // SVG logo
+    &__logo {
+        flex-grow: 1;
+        font-family: $font-family;
+    }
+
+    &__logo-svg {
+        width: 126px;
+        height: 40px;
+    }
+
+    &__logo-svg-emblem {
+        fill: $highlight-color;
+    }
+
+    &__logo-svg-txt {
+        fill: rgb(160, 160, 160);
+    }
+
+}

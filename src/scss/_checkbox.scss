@@ -1,0 +1,57 @@
+.checkbox-icon {
+    cursor: pointer;
+
+    &__path {
+        vector-effect: non-scaling-stroke;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+    }
+
+    &__circle-green {
+        stroke: #90e43d;
+        stroke-dasharray: 70;
+        stroke-dashoffset: 70;
+        transition: .25s linear .25s;
+
+        @include media-query(medium) {
+            stroke-dasharray: 95;
+            stroke-dashoffset: 95;
+        }
+
+    }
+
+    &__circle-grey {
+        stroke: lighten($grey-color, 25%);
+        transition: .25s linear .8s;
+    }
+
+    &__tick {
+        stroke: #90e43d;
+        stroke-dasharray: 30;
+        stroke-dashoffset: 30;
+        transition: .25s linear 0s;
+
+        @include media-query(medium) {
+            stroke-dasharray: 37;
+            stroke-dashoffset: 37;
+        }
+
+    }
+
+    &--active &__circle-green {
+        stroke-dashoffset: 0;
+        transition: .5s ease-in .4s;
+    }
+
+    &--active &__circle-grey {
+        opacity: 0;
+        transition: .25s ease-in 0s;
+    }
+
+    &--active &__tick {
+        stroke-dashoffset: 0;
+        transition: .25s ease-in 1s;
+    }
+}

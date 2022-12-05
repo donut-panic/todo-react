@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "ToDoIcons";
+  src: url("../assets/fonts/ToDoIcons.eot");
+  src: url("../assets/fonts/ToDoIcons.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/ToDoIcons.woff") format("woff"),
+    url("../assets/fonts/ToDoIcons.ttf") format("truetype"),
+    url("../assets/fonts/ToDoIcons.svg#ToDoIcons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*='icon-']:before{
+  display: inline-block;
+  font-family: 'ToDoIcons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}

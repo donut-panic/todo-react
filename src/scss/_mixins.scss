@@ -1,0 +1,20 @@
+@mixin flex($direction, $align-items, $justify-content, $type: flex) {
+    display: $type;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin media-query($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if ($size) {
+        @media screen and #{$size} {
+            @content;
+        }
+    }
+
+    @else {
+        @error 'Wrong breakpoint name!';
+    }
+}

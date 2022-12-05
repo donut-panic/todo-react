@@ -1,0 +1,41 @@
+.sort {
+    background-color: #fdfdfd;
+    border-bottom: 3px solid #ccc;
+    padding-top: 4rem;
+
+    &__bar {
+
+        @include media-query(small) {
+            width: 80%;
+        }
+
+        max-width: 1000px;
+        margin: 0 auto;
+        @include flex(row, center, stretch);
+    }
+
+    &__tab {
+        background-color: transparent;
+        text-decoration: none;
+        font-family: $font-family;
+        color: #ccc;
+        font-size: 1.3rem;
+        padding: 1rem;
+        flex-grow: 1;
+        text-align: center;
+        border: none;
+        border-bottom: 3px solid #ccc;
+        transform: translateY(3px);
+        cursor: pointer;
+        outline: none;
+
+        &--active {
+            color: $highlight-color;
+        }
+
+        &:hover {
+            border-bottom-color: $highlight-color;
+            color: $highlight-color;
+        }
+    }
+}
